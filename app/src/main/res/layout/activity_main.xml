@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/layout_textcounter"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
@@ -25,23 +26,38 @@
     </LinearLayout>
 
     <LinearLayout
-        android:onClick="next_question"
         android:id="@+id/question_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:background="@android:color/holo_green_dark"
         android:gravity="center"
+        android:onClick="next_question"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/text_question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="QUESTION"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:text="Игра 'О, счастливчик!'"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="30sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/text_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="нажать для старта игры"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/layout_answers"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -55,7 +71,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:onClick="button_answer1_click"
+                android:onClick="button_answer_click"
                 android:id="@+id/button_answer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,7 +79,7 @@
                 android:text="Answer1" />
 
             <Button
-                android:onClick="button_answer1_click"
+                android:onClick="button_answer_click"
                 android:id="@+id/button_answer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -76,7 +92,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:onClick="button_answer1_click"
+                android:onClick="button_answer_click"
                 android:id="@+id/button_answer3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,7 +100,7 @@
                 android:text="Answer3" />
 
             <Button
-                android:onClick="button_answer1_click"
+                android:onClick="button_answer_click"
                 android:id="@+id/button_answer4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
